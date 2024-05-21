@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MovieController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,3 +16,9 @@ use App\Http\Controllers\HomeController;
 */
 
 Route::get('/', [HomeController::class,'index'])->name('home');
+Route::get('/', [MovieController::class,'index'])->name('movies.index');
+
+
+Route::fallback(function () {
+    return redirect()->route('home');
+});
