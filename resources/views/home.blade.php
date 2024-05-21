@@ -4,7 +4,10 @@
 
 @section('content')
 <main>
-    <h1>Home page</h1>
+    <div class="home-page">
+        <h1 class="text-center">blockboolster and fnacbool</h1>
+    </div>
+    
 </main>
 
 @endsection

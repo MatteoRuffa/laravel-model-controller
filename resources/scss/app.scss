@@ -9,6 +9,75 @@ $fa-font-path: "../webfonts" !default;
 
 @import '~bootstrap/scss/bootstrap';
 
-h1 {
-    color: $text-color;
+body {
+    background: linear-gradient(to bottom,  $bg-black 0%, $bg-accounts 100%);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+   
+}
+header {
+    
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 600;
+    transition: background-color 0.3s ease;
+    background: linear-gradient(to top, transparent 0%, $bg-black 100%);
+    &.scrolled {
+        background-color: $bg-black;
+        background: $bg-black
+    }
+    ul {
+        li{
+            padding: 0 20px;
+            a {
+            text-decoration: none;
+            color: white;
+            }
+        }
+    }
+}
+
+main {
+    padding-top: 60px ;
+    h1 {
+        color: white;
+    }
+    .home-page{
+        height: 100vh;
+        h1 {
+            color: white;
+            font-size: 2.5rem;
+            padding: 40px;
+            
+        }
+    }
+    
+    
+}
+
+#card-movie {
+    .card{
+        width: 18rem; 
+        background-color: $bg-dark; 
+        color: white;
+        .card-title{
+            height: 70px;
+        }
+        p {
+            height: 200px;
+        }
+    }
+}
+
+#row-movie {
+    .card{
+        width: 18rem; 
+        background-color: $bg-dark; 
+        color: white;
+        h5 {
+            height: 70px;
+        }
+    }
 }
