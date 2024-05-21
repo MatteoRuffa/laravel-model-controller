@@ -17,7 +17,7 @@ use App\Http\Controllers\MovieController;
 
 Route::get('/', [HomeController::class,'index'])->name('home');
 Route::get('/movies', [MovieController::class,'index'])->name('movies.index');
-Route::get('/movies/{id}', [MovieController::class,'show'])->name('movies.show');
+Route::get('/movies/{movie}', [MovieController::class,'show'])->name('movies.show');
 
 Route::fallback(function () {
     return redirect()->route('home');
